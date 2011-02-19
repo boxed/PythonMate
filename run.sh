@@ -1,0 +1,1 @@
+./build/Debug/CocoaPuDB.app/Contents/MacOS/CocoaPuDB

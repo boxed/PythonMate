@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+# To install: in TextMate go to Bundles/Bundle Editor/Show Bundle Editor, create a new command named "Toggle Breakpoint in PythonMate". I've chosen to use cmd+shift+b for setting breakpoints because it's fairly easy to remember and isn't already taken.
+
+import os
+from sys import stdout, stdin, exit
+from traceback import format_stack
+from os import system
+
+py = stdin.read()
+
+osa_cmd = 'tell application "PythonMate" to set breakpoint "%s:%s"' % (os.environ['TM_FILEPATH'], os.environ['TM_LINE_NUMBER'])
+system('osascript -e \'%s\'' % osa_cmd)

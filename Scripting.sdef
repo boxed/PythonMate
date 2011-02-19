@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+	<!-- declare the namespace for using XInclude so we can include the standard suite -->
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
+
+
+		<!-- use XInclude to include the standard suite
+	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
+     -->
+
+		<!-- specific suite(s) for the application follow... -->
+	<suite name="Simple Scripting Verbs" code="PMrb" description="Terminology for the SimpleScriptingVerbs Sample.">
+
+		<command name="set breakpoint" code="PMrbDpCm" description="run a simple command with a direct parameter">
+			<cocoa class="SetBreakpoint"/>
+			<direct-parameter description="a text parameter passed to the command">
+				<type type="text"/>
+			</direct-parameter>
+			<result type="text" description="the direct parameter enclosed in quotes"/>
+		</command>
+	</suite>
+
+</dictionary>
