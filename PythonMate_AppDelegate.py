@@ -66,6 +66,7 @@ class PythonMate_AppDelegate(NSObject):
     stackUI = IBOutlet()
     localsUI = IBOutlet()
     breakpointsUI = IBOutlet()
+    filenameUI = IBOutlet()
     
     stack = []
     locals = []
@@ -92,10 +93,11 @@ class PythonMate_AppDelegate(NSObject):
         self.debugger.delegate = self
         pool = NSAutoreleasePool.alloc().init()
         try:
-            self.debugger.runscript('/Users/boxed/Projects/PythonMate/debug_me.py')
-        except:
+            self.debugger.runscript(self.filenameUI.stringValue())
+        except Exception, e:
             import traceback
             traceback.print_exc()
+            NSAlert.alertWithMessageText_defaultButton_alternateButton_otherButton_informativeTextWithFormat_(str(e), 'ok', None, None, '').runModal()
         print 'breakpoints:', self.debugger.get_all_breaks()
         
     def runDebugger(self):
