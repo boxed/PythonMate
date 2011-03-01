@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="21"/>
 			<integer value="57"/>
+			<integer value="2"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -69,6 +69,26 @@
 									<int key="NSfFlags">1044</int>
 								</object>
 								<reference key="NSControlView" ref="742456416"/>
+								<int key="NSButtonFlags">-2033434369</int>
+								<int key="NSButtonFlags2">162</int>
+								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"/>
+								<int key="NSPeriodicDelay">400</int>
+								<int key="NSPeriodicInterval">75</int>
+							</object>
+						</object>
+						<object class="NSButton" id="8656437">
+							<reference key="NSNextResponder" ref="315166524"/>
+							<int key="NSvFlags">289</int>
+							<string key="NSFrame">{{389, 8}, {62, 23}}</string>
+							<reference key="NSSuperview" ref="315166524"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="616020262">
+								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags2">134217728</int>
+								<string key="NSContents">Start</string>
+								<reference key="NSSupport" ref="875920686"/>
+								<reference key="NSControlView" ref="8656437"/>
 								<int key="NSButtonFlags">-2033434369</int>
 								<int key="NSButtonFlags2">162</int>
 								<string key="NSAlternateContents"/>
@@ -1508,10 +1528,6 @@
 				<bool key="NSClearsFilterPredicateOnInsertion">YES</bool>
 			</object>
 			<object class="NSUserDefaultsController" id="260585873">
-				<object class="NSMutableArray" key="NSDeclaredKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>filename</string>
-				</object>
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</object>
@@ -2098,6 +2114,62 @@
 					</object>
 					<int key="connectionID">573</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">stopStart:</string>
+						<reference key="source" ref="348072057"/>
+						<reference key="destination" ref="8656437"/>
+					</object>
+					<int key="connectionID">580</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">step</string>
+						<reference key="source" ref="348072057"/>
+						<reference key="destination" ref="742456416"/>
+					</object>
+					<int key="connectionID">588</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">next</string>
+						<reference key="source" ref="348072057"/>
+						<reference key="destination" ref="619814418"/>
+					</object>
+					<int key="connectionID">589</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">out</string>
+						<reference key="source" ref="348072057"/>
+						<reference key="destination" ref="1007976011"/>
+					</object>
+					<int key="connectionID">590</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">until</string>
+						<reference key="source" ref="348072057"/>
+						<reference key="destination" ref="41005936"/>
+					</object>
+					<int key="connectionID">591</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">cont</string>
+						<reference key="source" ref="348072057"/>
+						<reference key="destination" ref="233647167"/>
+					</object>
+					<int key="connectionID">592</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">startStop</string>
+						<reference key="source" ref="348072057"/>
+						<reference key="destination" ref="8656437"/>
+					</object>
+					<int key="connectionID">593</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2158,6 +2230,7 @@
 							<reference ref="749601584"/>
 							<reference ref="177292238"/>
 							<reference ref="653508391"/>
+							<reference ref="8656437"/>
 						</object>
 						<reference key="parent" ref="372786738"/>
 					</object>
@@ -3048,6 +3121,20 @@
 						<reference key="object" ref="260585873"/>
 						<reference key="parent" ref="909586299"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">577</int>
+						<reference key="object" ref="8656437"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="616020262"/>
+						</object>
+						<reference key="parent" ref="315166524"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">578</int>
+						<reference key="object" ref="616020262"/>
+						<reference key="parent" ref="8656437"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -3269,6 +3356,9 @@
 					<string>57.IBPluginDependency</string>
 					<string>57.ImportedFromIB2</string>
 					<string>57.editorWindowContentRectSynchronizationRect</string>
+					<string>577.IBPluginDependency</string>
+					<string>577.IBViewBoundsToFrameTransform</string>
+					<string>578.IBPluginDependency</string>
 					<string>58.IBPluginDependency</string>
 					<string>58.ImportedFromIB2</string>
 					<string>75.IBPluginDependency</string>
@@ -3362,9 +3452,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<integer value="1"/>
-					<string>{{624, 114}, {457, 587}}</string>
+					<string>{{568, 107}, {457, 587}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{624, 114}, {457, 587}}</string>
+					<string>{{568, 107}, {457, 587}}</string>
 					<integer value="1"/>
 					<integer value="1"/>
 					<string>{{44, 496}, {480, 360}}</string>
@@ -3429,7 +3519,7 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABA4AAAwnwAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABA4AAAwegAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3468,22 +3558,22 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCmgAAwnwAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCmgAAwegAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDEgAAwnwAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDEgAAwegAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDjYAAwnwAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDjYAAwegAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDVgAAwnwAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDVgAAwegAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3524,6 +3614,11 @@
 					<integer value="1"/>
 					<string>{{60, 642}, {268, 183}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABBQAAAwcAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
@@ -3551,7 +3646,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">573</int>
+			<int key="maxID">593</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3568,10 +3663,12 @@
 							<string>out:</string>
 							<string>removeBreakpoint:</string>
 							<string>step:</string>
+							<string>stopStart:</string>
 							<string>until:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -3589,6 +3686,7 @@
 							<string>out:</string>
 							<string>removeBreakpoint:</string>
 							<string>step:</string>
+							<string>stopStart:</string>
 							<string>until:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -3614,6 +3712,10 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">stopStart:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">until:</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -3625,15 +3727,27 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>breakpointsController</string>
 							<string>breakpointsUI</string>
+							<string>cont</string>
 							<string>filenameUI</string>
 							<string>localsController</string>
 							<string>localsUI</string>
+							<string>next</string>
+							<string>out</string>
 							<string>stackController</string>
 							<string>stackUI</string>
+							<string>startStop</string>
+							<string>step</string>
+							<string>until</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -3650,11 +3764,17 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>breakpointsController</string>
 							<string>breakpointsUI</string>
+							<string>cont</string>
 							<string>filenameUI</string>
 							<string>localsController</string>
 							<string>localsUI</string>
+							<string>next</string>
+							<string>out</string>
 							<string>stackController</string>
 							<string>stackUI</string>
+							<string>startStop</string>
+							<string>step</string>
+							<string>until</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -3665,6 +3785,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">breakpointsUI</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">cont</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -3680,11 +3804,31 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">next</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">out</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">stackController</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">stackUI</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">startStop</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">step</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">until</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">

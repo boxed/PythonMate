@@ -11,7 +11,7 @@ import debugger
 
 def textMate_moveCursor(filename, lineno):
     print 'TextMate:', filename, lineno
-    tm_url = 'txmt://open/?url=file://%s&line=%s' % (filename, f.lineno)
+    tm_url = 'txmt://open/?url=file://%s&line=%s' % (filename, lineno)
     osa_cmd = 'tell application "TextMate" to get url "%s"' % tm_url
     from os import system
     system('osascript -e \'%s\'' % osa_cmd)
@@ -67,15 +67,23 @@ class PythonMate_AppDelegate(NSObject):
     localsUI = IBOutlet()
     breakpointsUI = IBOutlet()
     filenameUI = IBOutlet()
+    # buttons
+    step = IBOutlet()
+    next = IBOutlet()
+    out = IBOutlet()
+    until = IBOutlet()
+    cont = IBOutlet()
+    startStop = IBOutlet()
     
     stack = []
     locals = []
     breakpoints = set()
     breakpointList = []
+    isDebugging = False
 
     def applicationDidFinishLaunching_(self, sender):
         self.window.makeKeyWindow()
-        NSThread.detachNewThreadSelector_toTarget_withObject_(self.startDebugger_, self, None)
+        self.updateButtons()
         #self.stack.append({'key':'foo'})
         #self.window.makeFirstResponder_(self.answer_UI)
         #from pudb import runscript
@@ -87,8 +95,9 @@ class PythonMate_AppDelegate(NSObject):
         #except:
         #    import traceback
         #    traceback.print_exc()
-        
-    def startDebugger_(self, params):
+    
+    def debuggerThread_(self, params):
+        self.updateButtons()
         self.debugger = debugger.Debugger()
         self.debugger.delegate = self
         pool = NSAutoreleasePool.alloc().init()
@@ -98,14 +107,33 @@ class PythonMate_AppDelegate(NSObject):
             import traceback
             traceback.print_exc()
             NSAlert.alertWithMessageText_defaultButton_alternateButton_otherButton_informativeTextWithFormat_(str(e), 'ok', None, None, '').runModal()
-        print 'breakpoints:', self.debugger.get_all_breaks()
+        self.isDebugging = False
+        self.updateButtons()
+
+    def updateButtons(self):
+        self.step.setEnabled_(self.isDebugging)
+        self.next.setEnabled_(self.isDebugging)
+        self.out.setEnabled_(self.isDebugging)
+        self.until.setEnabled_(self.isDebugging)
+        self.cont.setEnabled_(self.isDebugging)
+        self.startStop.setTitle_('Stop' if self.isDebugging else 'Start')
         
     def runDebugger(self):
         self.debugger.go = True
         self.stack[:] = []
         self.locals[:] = []
         self.stackController.rearrangeObjects()
-        self.localsController.rearrangeObjects()
+
+    @IBAction
+    def stopStart_(self, sender):
+        if self.isDebugging:
+            print 'stopping debugger'
+            self.debugger.set_quit()
+            self.runDebugger()
+        else:
+            print 'started debugger'
+            self.isDebugging = True
+            NSThread.detachNewThreadSelector_toTarget_withObject_(self.debuggerThread_, self, None)
     
     @IBAction
     def step_(self, sender):
