@@ -278,8 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>12</integer>
-									<integer>10</integer>
+									<integer>5</integer>
+									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -333,7 +333,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AEC8D53D13108780004A0039</string>
+										<string>AE43F3DB1325795B008BB80E</string>
 										<key>history</key>
 										<array>
 											<string>AECF06C1130A836800A0B70F</string>
@@ -342,9 +342,9 @@
 											<string>AE47C94F13102524004927D9</string>
 											<string>AE47C95113102524004927D9</string>
 											<string>AE47C98E13102EF0004927D9</string>
-											<string>AE47CA0313103B06004927D9</string>
-											<string>AE47CA0413103B06004927D9</string>
-											<string>AE47CA1813103F00004927D9</string>
+											<string>AE8F75F1131D6E8800BCA7DE</string>
+											<string>AE43F3D91325795B008BB80E</string>
+											<string>AE43F3DA1325795B008BB80E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -402,9 +402,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>AEC8D51A1310853A004A0039</string>
+				<string>AE43F3DC1325795B008BB80E</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>AEC8D51B1310853A004A0039</string>
+				<string>AE43F3DD1325795B008BB80E</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -540,11 +540,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AEC8D52F1310865A004A0039</string>
-		<string>AEC8D5301310865A004A0039</string>
-		<string>1C78EAAD065D492600B07095</string>
+		<string>AE43F3E61325795B008BB80E</string>
+		<string>AE43F3E71325795B008BB80E</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>AEF635890E6AA0C1006FE8E0</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/boxed/Open Source Projects/PythonMate/PythonMate.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -625,7 +625,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>AEF635890E6AA0C1006FE8E0</string>
-				<string>AEC8D51C1310853A004A0039</string>
+				<string>AE43F3DE1325795B008BB80E</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -745,13 +745,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>AEC8D5271310865A004A0039</string>
+				<string>AE43F3DF1325795B008BB80E</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>AEC8D5281310865A004A0039</string>
-				<string>AEC8D5291310865A004A0039</string>
-				<string>AEC8D52A1310865A004A0039</string>
-				<string>AEC8D52B1310865A004A0039</string>
-				<string>AEC8D52C1310865A004A0039</string>
+				<string>AE43F3E01325795B008BB80E</string>
+				<string>AE43F3E11325795B008BB80E</string>
+				<string>AE43F3E21325795B008BB80E</string>
+				<string>AE43F3E31325795B008BB80E</string>
+				<string>AE43F3E41325795B008BB80E</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -907,7 +907,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>AEC8D52D1310865A004A0039</string>
+				<string>AE43F3E51325795B008BB80E</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -917,7 +917,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

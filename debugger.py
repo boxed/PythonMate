@@ -24,8 +24,14 @@ class Debugger(bdb.Bdb):
         # Start with fresh empty copy of globals and locals and tell the script
         # that it's being run as __main__ to avoid scripts being able to access
         # the debugger's namespace.
-        globals_ = {"__name__" : "__main__", "__file__": filename }
+        globals_ = {"__name__" : "__main__", "__file__": filename}
         locals_ = globals_
+        
+        import sys
+        import os
+        if os.path.basename(filename) not in sys.path:
+            print 'adding python path:',os.path.basename(filename)
+            sys.path.append(os.path.basename(filename))
 
         # When bdb sets tracing, a number of call and line events happens
         # BEFORE debugger even reaches user's code (and the exact sequence of

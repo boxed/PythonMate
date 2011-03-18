@@ -9,6 +9,10 @@ import inspect
 
 import debugger
 
+# TODO: handle stdout, stderr, stdin
+# BUG: when restarting the debug session, pre-existing breakpoints aren't enabled
+# BUG: current directory should be where the script is
+
 def textMate_moveCursor(filename, lineno):
     print 'TextMate:', filename, lineno
     tm_url = 'txmt://open/?url=file://%s&line=%s' % (filename, lineno)
