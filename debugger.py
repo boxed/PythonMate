@@ -9,6 +9,10 @@ class Debugger(bdb.Bdb):
     go = False
     #def user_call(self, frame, argument_list):
     #    return
+    
+    def dispatch_exception(self, frame, arg):
+        print 'exception'
+        self.user_exception(frame, arg)
         
     def user_line(self, frame):
         """This function is called when we stop or break at this line."""

@@ -211,7 +211,7 @@ class PythonMate_AppDelegate(NSObject):
     def outputStack(self):
         del self.stack[:]
         frame = self.frame
-        while frame.f_back:
+        while frame:
             f = Frame.alloc().init()
             f.setFrame_(frame)
             self.stack.append(f)
